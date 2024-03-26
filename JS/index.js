@@ -1,31 +1,26 @@
-let userRandomNum1 = Math.ceil(Math.random() * 10);
-let userRandomNum2 = Math.ceil(Math.random() * 30);
+let cardOne = 10;
+let cardTwo = 5;
+let sum = cardOne + cardTwo;
+// let result = "";
 let result = document.querySelector(".result");
+let sumEl = document.querySelector(".sum");
+let cardEl = document.querySelector(".cards");
 
 function startGame() {
-    // jack Number
-    let jackNum = document.querySelector(".jackNum");
-    let jackRandomNum = Math.ceil(Math.random() * 30);
-    jackNum.textContent = " " + jackRandomNum;
+    cardEl.textContent = "My Cards :" + cardOne + ", " + cardTwo;
+    sumEl.textContent = "Sums :" + sum;
 
-
-    // user Number
-    let userNum = document.querySelector(".userNum");
-    userNum.textContent = userRandomNum1 + " , " + userRandomNum2;
-
-    // sum Number
-    let userSum = document.querySelector(".userSum");
-    let sum = userRandomNum1 + userRandomNum2;
-    userSum.textContent = sum;
-
-    // checking winner 
-    if (sum > jackRandomNum) {
-        result.textContent = "Jack win the match";
-    } 
-    else if (sum  ===  jackRandomNum) {
-        result.textContent = "You win the match";
-    } 
-    else {
-         result.textContent = "pick another card to continue the game";
+    if (sum <= 20) {
+        result.textContent = "pick another card";
+    } else if (sum === 21) {
+        result.textContent = "you win the round";
+    } else {
+        result.textContent = "you lost the round";
     }
+}
+
+function newCard() {
+    let card = 5;
+    sum += card;
+    startGame()
 }

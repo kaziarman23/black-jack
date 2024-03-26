@@ -1,14 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./CSS/style.css">
-    <title>Black Jack</title>
-</head>
-<body>
-    
-
-    <script src="./JS/index.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./CSS/style.css" />
+        <title>Black Jack</title>
+    </head>
+    <body>
+        <div class="conteiner">
+            <div class="card">
+                <h1>The Black Jack</h1>
+                <h2 class="message">start the game</h2>
+                <h2 class="jackCard">Jack Card :</h2>
+                <h2 class="cards">My Cards :</h2>
+                <h2 class="sum">Sums :</h2>
+                <div class="buttonWrapper">
+                    <button
+                        type="button"
+                        class="startBtn"
+                        onclick="startGame()"
+                    >
+                        Start Game
+                    </button>
+                    <button type="button" class="cardBtn" onclick="newCard()">New card</button>
+                </div>
+                <p class="result"></p>
+            </div>
+        </div>
+        <script src="./JS/index.js"></script>
+    </body>
 </html>
