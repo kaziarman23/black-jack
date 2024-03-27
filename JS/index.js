@@ -1,6 +1,3 @@
-// git push :1
-
-
 let cards = [];
 let sum = 0;
 let isAlive = false;
